@@ -17,11 +17,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@color/colorAccent">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="search"/>
+        android:background="#aaa">
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaa">
+<EditText
+    android:textSize="25sp"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:imeOptions="actionSearch"
+    android:hint="make a quick google search"
+    android:background="@drawable/quick_search_toolbar"/>
+
+
+</android.support.v7.widget.CardView>
     </LinearLayout>
 
 </LinearLayout>
