@@ -6,10 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="?attr/colorPrimary"
-    android:paddingLeft="0dp"
-    android:paddingRight="0dp"
-    android:paddingTop="0dp"
-    android:paddingBottom="0dp"
     app:popupTheme="@style/AppTheme.PopupOverlay">
 
     <LinearLayout
@@ -18,12 +14,13 @@
         android:orientation="horizontal">
 
         <EditText
-            android:padding="0dp"
-            android:layout_width="280dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
         <Button
-            android:layout_width="50dp"
+            android:layout_weight="0"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="GO" />
 
