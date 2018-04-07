@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="bottom|end"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="bottom|end"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:onClick="openDialog"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:src="@android:drawable/arrow_up_float"
+        android:background="#000"/>
+
+</LinearLayout>
