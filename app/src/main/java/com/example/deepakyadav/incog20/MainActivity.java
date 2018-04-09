@@ -11,6 +11,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -18,6 +19,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Window;
+import android.view.inputmethod.EditorInfo;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -51,17 +53,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         webView = findViewById(R.id.webview);
         webView.setWebChromeClient(new WebChromeClient(){
-            @Override
-            public void onProgressChanged(WebView view, int newProgress) {
 
-
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                        progressBar.setProgress(newProgress, true);
-                    }else{
-                    progressBar.setProgress(newProgress);
-                }
-                super.onProgressChanged(view, newProgress);
-            }
 
             @Override
             public void onReceivedIcon(WebView view, Bitmap icon) {
@@ -95,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://www.youtube.com");
+        webView.loadUrl("http://www.pornhub.com");
 
 
 
@@ -114,6 +106,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 currenturlET.setText("");
+            }
+        });
+        currenturlET.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if(i== EditorInfo.IME_ACTION_GO){
+                    webView.loadUrl(currenturlET.getText().toString());
+                }
+                return false;
             }
         });
     }
