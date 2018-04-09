@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
             }
+            
             @Override
             public void onPageFinished(WebView view, String url) {
                 TextView toolbarTitle=toolbar.findViewById(R.id.toolbar_title);
