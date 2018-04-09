@@ -10,12 +10,14 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -80,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
             }
-
             @Override
             public void onPageFinished(WebView view, String url) {
                 TextView toolbarTitle=toolbar.findViewById(R.id.toolbar_title);
@@ -102,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
         Dialog urldialog=new Dialog(this,R.style.urldialogTheme);
         urldialog.setContentView(R.layout.urldialog);
         urldialog.setCanceledOnTouchOutside(true);
+        Window window=urldialog.getWindow();
+        window.setGravity(Gravity.TOP);
         urldialog.show();
         final EditText currenturlET=urldialog.findViewById(R.id.toolbar_currentURL);
         currenturlET.setText(webView.getUrl());
