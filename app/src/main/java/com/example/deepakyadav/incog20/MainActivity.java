@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://www.pornhub.com");
+        webView.loadUrl("http://www.youtube.com");
 
 
 
@@ -131,14 +131,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void openDialog(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_home:
-                Toast.makeText(MainActivity.this,R.string.text_home,Toast.LENGTH_SHORT).show();
+            case R.id.new_tab:
+                Toast.makeText(MainActivity.this,"New Tab",Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.menu_notifications:
-                Toast.makeText(MainActivity.this,R.string.text_notifications,Toast.LENGTH_SHORT).show();
+            case R.id.home:
+                Toast.makeText(MainActivity.this,"Launch Home Screen",Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.menu_search:
-                Toast.makeText(MainActivity.this,R.string.text_search,Toast.LENGTH_SHORT).show();
+            case R.id.open_options:
+                Dialog optionsDialog=new Dialog(this, R.style.urldialogTheme);
+                optionsDialog.setContentView(R.layout.optionsdialog);
+                optionsDialog.setCanceledOnTouchOutside(true);
+                Window window=optionsDialog.getWindow();
+                window.setGravity(Gravity.BOTTOM);
+                optionsDialog.show();
+
                 break;
         }
     }

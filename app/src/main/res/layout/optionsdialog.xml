@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-        <android.support.v7.widget.CardView
+<LinearLayout android:layout_marginBottom="?attr/actionBarSize"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
 
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="#ddd"
             android:gravity="center"
-            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
-                android:background="#ddd"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-            <android.support.constraint.ConstraintLayout
+            <LinearLayout
                 android:gravity="center"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
                 <TextView
                     android:padding="2dp"
                     android:background="@drawable/nav_icon_background_shape_text"
@@ -38,11 +36,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dp"
-                    android:text="Quick Modes"/>
+                    android:text="Options"/>
                 <LinearLayout
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/nav_quick"
                     android:id="@+id/nav_row_1"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
@@ -68,7 +63,7 @@
                             android:textColor="#000"
                             android:background="@drawable/nav_icon_background_shape_text"
                             android:padding="2dp"
-                            android:text="Incognito"/>
+                            android:text="History"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_margin="2dp"
@@ -115,9 +110,6 @@
 
                 </LinearLayout>
                 <LinearLayout
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/nav_row_1"
                     android:id="@+id/nav_row_2"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
@@ -187,110 +179,9 @@
                     </LinearLayout>
 
                 </LinearLayout>
-                <LinearLayout
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/nav_row_2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:id="@+id/nav_row_3"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_advertising" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="Adblock" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_pop_up" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="Pop up" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@android:drawable/ic_menu_close_clear_cancel" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="Off Tracker" />
-                    </LinearLayout>
-
-                </LinearLayout>
-            </android.support.constraint.ConstraintLayout>
             </LinearLayout>
+        </LinearLayout>
 
-        </android.support.v7.widget.CardView>
-
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="#ccc">
-        <TextView
-            android:gravity="center"
-            android:textSize="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Session History"/>
-<!--        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">-->
-            <ListView
-                android:background="#eee"
-                android:entries="@array/session_history_dummy"
-                android:id="@+id/session_history"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </ListView>
-<!--        </ScrollView>-->
-
-    </LinearLayout>
-
+    </android.support.v7.widget.CardView>
 </LinearLayout>

@@ -14,14 +14,18 @@
         <include layout="@layout/toolbar"></include>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main"></include>
+    <include layout="@layout/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/windowFixedHeightMajor">
+
+    </include>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/colorAccent"
+        android:background="#fff"
         design:menu="@menu/bottom_nav_items" />
 
 </android.support.design.widget.CoordinatorLayout>

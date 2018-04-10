@@ -17,12 +17,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <EditText
+                android:layout_gravity="bottom"
+                android:maxLines="1"
+                android:lines="1"
                 android:textColor="#333"
                 android:id="@+id/toolbar_currentURL"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:imeOptions="actionGo"/>
+                android:layout_height="wrap_content"
+                android:imeOptions="actionGo"
+                />
             <ImageButton
                 android:id="@+id/toolbar_clearURL"
                 android:layout_width="wrap_content"

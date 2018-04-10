@@ -10,5 +10,14 @@
     <string name="text_home">Home</string>
     <string name="text_notifications">Notifications</string>
     <string name="text_search">Search</string>
+    <string-array name="session_history_dummy">
+        <item>www.wikipedia.org/home</item>
+        <item>www.wikipedia.org/about</item>
+        <item>www.wikipedia.org/alexander</item>
+        <item>www.wikipedia.org/alexander/kids</item>
+        <item>www.wikipedia.org/justinbieber</item>
+        <item>www.wikipedia.org/demilovato</item>
+        <item>www.wikipedia.org/zayn</item>
+    </string-array>
 
 </resources>
