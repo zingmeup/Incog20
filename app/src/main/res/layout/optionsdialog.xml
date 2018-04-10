@@ -24,6 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
+                    android:layout_margin="2dp"
                     android:padding="2dp"
                     android:background="@drawable/nav_icon_background_shape_text"
                     android:id="@+id/nav_quick"
@@ -35,7 +36,6 @@
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="6dp"
                     android:text="Options"/>
                 <LinearLayout
                     android:id="@+id/nav_row_1"
@@ -54,7 +54,7 @@
                         <ImageView
                             android:layout_width="@dimen/nav_icon"
                             android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_spy"
+                            android:src="@drawable/ic_history"
 
                             />
                         <TextView
@@ -76,7 +76,7 @@
                         <ImageView
                             android:layout_width="@dimen/nav_icon"
                             android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_pop_up" />
+                            android:src="@drawable/ic_bookmark" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -84,7 +84,7 @@
                             android:textColor="#000"
                             android:background="@drawable/nav_icon_background_shape_text"
                             android:padding="2dp"
-                            android:text="JavaScript" />
+                            android:text="Bookmarks" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_margin="2dp"
@@ -97,7 +97,7 @@
                         <ImageView
                             android:layout_width="@dimen/nav_icon"
                             android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_image" />
+                            android:src="@drawable/ic_explosion" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                             android:textColor="#000"
                             android:background="@drawable/nav_icon_background_shape_text"
                             android:padding="2dp"
-                            android:text="No Image" />
+                            android:text="Distroy" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -125,7 +125,7 @@
                         <ImageView
                             android:layout_width="@dimen/nav_icon"
                             android:layout_height="@dimen/nav_icon"
-                            android:src="@android:drawable/ic_lock_idle_charging"/>
+                            android:src="@drawable/ic_lens"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -133,7 +133,7 @@
                             android:textColor="#000"
                             android:background="@drawable/nav_icon_background_shape_text"
                             android:padding="2dp"
-                            android:text="Flashplayer" />
+                            android:text="Find in " />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_margin="2dp"
@@ -146,7 +146,7 @@
                         <ImageView
                             android:layout_width="@dimen/nav_icon"
                             android:layout_height="@dimen/nav_icon"
-                            android:src="@android:drawable/star_big_on" />
+                            android:src="@drawable/ic_cloud_computing" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -154,7 +154,7 @@
                             android:textColor="#000"
                             android:background="@drawable/nav_icon_background_shape_text"
                             android:padding="2dp"
-                            android:text="NightMode" />
+                            android:text="Downloads" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_margin="2dp"
@@ -167,7 +167,7 @@
                         <ImageView
                             android:layout_width="@dimen/nav_icon"
                             android:layout_height="@dimen/nav_icon"
-                            android:src="@android:drawable/ic_menu_recent_history" />
+                            android:src="@drawable/ic_locked" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -175,7 +175,7 @@
                             android:textColor="#000"
                             android:background="@drawable/nav_icon_background_shape_text"
                             android:padding="2dp"
-                            android:text="Proxy" />
+                            android:text="Login" />
                     </LinearLayout>
 
                 </LinearLayout>
