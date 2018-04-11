@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#0000</color>
+    <color name="nightmode">#db000000</color>
+    <color name="readingmode">#b3510a0b</color>
+    <color name="red">#f00</color>
+    <color name="green">#0f0</color>
+    <color name="blue">#00f</color>
+    <color name="pink">#d1ce15ef</color>
+
+
+
+    <color name="theme_blue_colorPrimaryDark">#0288d1</color>
+    <color name="theme_blue_colorPrimaryLight">#b3e5fc</color>
+    <color name="theme_blue_colorPrimary">#03a9f4</color>
+    <color name="theme_blue_colortext">#ffffff</color>
+    <color name="theme_blue_colorAccent">#2ab3f1</color>
+    <color name="theme_blue_colorPrimaryText">#212121</color>
+    <color name="theme_blue_colorSecondaryText">#757575</color>
+    <color name="theme_blue_colorDivider">#bdbdbd</color>
+
+    <color name="theme_lightblue_colorPrimaryDark">#0097a7</color>
+    <color name="theme_lightblue_colorPrimaryLight">#b2ebf2</color>
+    <color name="theme_lightblue_colorPrimary">#00bcd4</color>
+    <color name="theme_lightblue_colortext">#ffffff</color>
+    <color name="theme_lightblue_colorAccent">#30d9ef</color>
+    <color name="theme_lightblue_colorPrimaryText">#212121</color>
+    <color name="theme_lightblue_colorSecondaryText">#757575</color>
+    <color name="theme_lightblue_colorDivider">#bdbdbd</color>
+
+    <color name="theme_green_colorPrimaryDark">#388e3c</color>
+    <color name="theme_green_colorPrimaryLight">#c8e6c9</color>
+    <color name="theme_green_colorPrimary">#4caf50</color>
+    <color name="theme_green_colortext">#ffffff</color>
+    <color name="theme_green_colorAccent">#8bc34a</color>
+    <color name="theme_green_colorPrimaryText">#212121</color>
+    <color name="theme_green_colorSecondaryText">#757575</color>
+    <color name="theme_green_colorDivider">#bdbdbd</color>
+
+    <color name="theme_teal_colorPrimaryDark">#00796b</color>
+    <color name="theme_teal_colorPrimaryLight">#b2dfdb</color>
+    <color name="theme_teal_colorPrimary">#009688</color>
+    <color name="theme_teal_colortext">#ffffff</color>
+    <color name="theme_teal_colorAccent">#00bfa5</color>
+    <color name="theme_teal_colorPrimaryText">#212121</color>
+    <color name="theme_teal_colorSecondaryText">#757575</color>
+    <color name="theme_teal_colorDivider">#bdbdbd</color>
+
+    <color name="theme_yellow_colorPrimaryDark">#ff4000</color>
+    <color name="theme_yellow_colorPrimaryLight">#ffecb3</color>
+    <color name="theme_yellow_colorPrimary">#ffc107</color>
+    <color name="theme_yellow_colortext">#212121</color>
+    <color name="theme_yellow_colorAccent">#ffd24e</color>
+    <color name="theme_yellow_colorPrimaryText">#212121</color>
+    <color name="theme_yellow_colorSecondaryText">#757575</color>
+    <color name="theme_yellow_colorDivider">#bdbdbd</color>
+
+    <color name="theme_grey_colorPrimaryDark">#455a64</color>
+    <color name="theme_grey_colorPrimaryLight">#cfd8dc</color>
+    <color name="theme_grey_colorPrimary">#607d8b</color>
+    <color name="theme_grey_colortext">#ffffff</color>
+    <color name="theme_grey_colorAccent">#7b9dae</color>
+    <color name="theme_grey_colorPrimaryText">#212121</color>
+    <color name="theme_grey_colorSecondaryText">#757575</color>
+    <color name="theme_grey_colorDivider">#bdbdbd</color>
+
+    <color name="theme_purple_colorPrimaryDark">#7b1fa2</color>
+    <color name="theme_purple_colorPrimaryLight">#e1bee7</color>
+    <color name="theme_purple_colorPrimary">#9c27b0</color>
+    <color name="theme_purple_colortext">#ffffff</color>
+    <color name="theme_purple_colorAccent">#03a9f4</color>
+    <color name="theme_purple_colorPrimaryText">#212121</color>
+    <color name="theme_purple_colorSecondaryText">#757575</color>
+    <color name="theme_purple_colorDivider">#bdbdbd</color>
+
+    <color name="theme_deepurple_colorPrimaryDark">#512da8</color>
+    <color name="theme_deepurple_colorPrimaryLight">#d1c4e9</color>
+    <color name="theme_deepurple_colorPrimary">#673ab7</color>
+    <color name="theme_deepurple_colortext">#ffffff</color>
+    <color name="theme_deepurple_colorAccent">#e040fb</color>
+    <color name="theme_deepurple_colorPrimaryText">#212121</color>
+    <color name="theme_deepurple_colorSecondaryText">#757575</color>
+    <color name="theme_deepurple_colorDivider">#bdbdbd</color>
+
+    <color name="theme_orange_colorPrimaryDark">#e64a19</color>
+    <color name="theme_orange_colorPrimaryLight">#ffccbc</color>
+    <color name="theme_orange_colorPrimary">#ff5722</color>
+    <color name="theme_orange_colortext">#ffffff</color>
+    <color name="theme_orange_colorAccent">#4caf50</color>
+    <color name="theme_orange_colorPrimaryText">#212121</color>
+    <color name="theme_orange_colorSecondaryText">#757575</color>
+    <color name="theme_orange_colorDivider">#bdbdbd</color>
+
+
+
+
+</resources>
