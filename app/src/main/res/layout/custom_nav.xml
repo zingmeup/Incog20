@@ -3,291 +3,338 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
-        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/nav_quickmodes_back"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:gravity="center">
+        <TextView
+        android:id="@+id/nav_quickmodes_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_margin="6dp"
+        android:background="@drawable/nav_icon_background_shape_text"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Quick Modes"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
         <android.support.v7.widget.CardView
-
-            android:gravity="center"
-            android:layout_weight="1"
+            android:id="@+id/nav_quickmodes_card"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
             <LinearLayout
-                android:background="#ddd"
-                android:gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:gravity="center">
 
-            <android.support.constraint.ConstraintLayout
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:padding="2dp"
-                    android:background="@drawable/nav_icon_background_shape_text"
-                    android:id="@+id/nav_quick"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    android:textSize="30sp"
-                    android:layout_gravity="top|center"
-                    android:gravity="center"
-                    android:layout_width="wrap_content"
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
-                    android:text="Quick Modes"/>
-                <LinearLayout
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/nav_quick"
-                    android:id="@+id/nav_row_1"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+
                     <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
+                        android:id="@+id/nav_row_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_spy"
-
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/nav_icognito_btn"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="Incognito"/>
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/nav_icon_background_shape"
+                            android:gravity="center"
+                            android:onClick="navigationMenuHandler"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/nav_icon"
+                                android:layout_height="@dimen/nav_icon"
+                                android:src="@drawable/ic_spy"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:padding="2dp"
+                                android:text="Incognito"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nav_readmode_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/nav_icon_background_shape"
+                            android:gravity="center"
+                            android:onClick="navigationMenuHandler"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/nav_icon"
+                                android:layout_height="@dimen/nav_icon"
+                                android:src="@drawable/ic_eye" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:padding="2dp"
+                                android:text="Reading"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nav_noimage_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/nav_icon_background_shape"
+                            android:gravity="center"
+                            android:onClick="navigationMenuHandler"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/nav_icon"
+                                android:layout_height="@dimen/nav_icon"
+                                android:src="@drawable/ic_image" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:padding="2dp"
+                                android:text="No Image"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
+                        android:id="@+id/nav_row_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_pop_up" />
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/nav_row_1">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/nav_flashplayer_btn_btn"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="JavaScript" />
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/nav_icon_background_shape"
+                            android:gravity="center"
+                            android:onClick="navigationMenuHandler"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/nav_icon"
+                                android:layout_height="@dimen/nav_icon"
+                                android:src="@drawable/ic_flash" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:padding="2dp"
+                                android:text="Flash/Script"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nav_nightmode_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/nav_icon_background_shape"
+                            android:gravity="center"
+                            android:onClick="navigationMenuHandler"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/nav_icon"
+                                android:layout_height="@dimen/nav_icon"
+                                android:src="@drawable/ic_stars_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:padding="2dp"
+                                android:text="NightMode"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nav_proxy_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/nav_icon_background_shape"
+                            android:gravity="center"
+                            android:onClick="navigationMenuHandler"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/nav_icon"
+                                android:layout_height="@dimen/nav_icon"
+                                android:src="@drawable/ic_hacker_2" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:padding="2dp"
+                                android:text="Proxy"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
                     </LinearLayout>
+
                     <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
+                        android:id="@+id/nav_row_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_image" />
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/nav_row_2">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/nav_adblock_btn"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="No Image" />
-                    </LinearLayout>
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/nav_icon_background_shape"
+                            android:gravity="center"
+                            android:onClick="navigationMenuHandler"
+                            android:orientation="vertical">
 
-                </LinearLayout>
-                <LinearLayout
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/nav_row_1"
-                    android:id="@+id/nav_row_2"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape" >
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_flash"/>
+                            <ImageView
+                                android:layout_width="@dimen/nav_icon"
+                                android:layout_height="@dimen/nav_icon"
+                                android:src="@drawable/ic_advertising" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:padding="2dp"
+                                android:text="Adblock"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nav_popup_btn"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="Flashplayer" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_stars_1" />
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/nav_icon_background_shape"
+                            android:gravity="center"
+                            android:onClick="navigationMenuHandler"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                            <ImageView
+                                android:layout_width="@dimen/nav_icon"
+                                android:layout_height="@dimen/nav_icon"
+                                android:src="@drawable/ic_pop_up" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:padding="2dp"
+                                android:text="Pop up"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nav_tracker_btn"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="NightMode" />
+                            android:layout_margin="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/nav_icon_background_shape"
+                            android:gravity="center"
+                            android:onClick="navigationMenuHandler"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/nav_icon"
+                                android:layout_height="@dimen/nav_icon"
+                                android:src="@drawable/ic_map" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:padding="2dp"
+                                android:text="Off Tracker"
+                                android:textColor="#000" />
+                        </LinearLayout>
+
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_hacker_2" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="Proxy" />
-                    </LinearLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/nav_row_2"
-                    android:id="@+id/nav_row_3"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_advertising" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="Adblock" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_pop_up" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="Pop up" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/nav_icon_background_shape">
-                        <ImageView
-                            android:layout_width="@dimen/nav_icon"
-                            android:layout_height="@dimen/nav_icon"
-                            android:src="@drawable/ic_map" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000"
-                            android:background="@drawable/nav_icon_background_shape_text"
-                            android:padding="2dp"
-                            android:text="Off Tracker" />
-                    </LinearLayout>
-
-                </LinearLayout>
-            </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/nav_hishtory"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#ccc">
+        android:gravity="center">
         <TextView
             android:gravity="center"
-            android:textSize="20sp"
-            android:layout_width="match_parent"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Session History"/>
+            android:text="Session History"
+            android:layout_margin="6dp"
+            android:padding="2dp"
+            android:background="@drawable/nav_icon_background_shape_text"/>
 <!--        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">-->
-            <ListView
-                android:background="#eee"
-                android:entries="@array/session_history_dummy"
-                android:id="@+id/session_history"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            </ListView>
+        <ListView
+            android:id="@+id/session_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/session_history_dummy"></ListView>
 <!--        </ScrollView>-->
 
     </LinearLayout>
