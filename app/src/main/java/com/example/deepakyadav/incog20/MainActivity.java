@@ -379,7 +379,7 @@ public class MainActivity extends AppCompatActivity {
                     navPopupEnabled=false;
                     viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape));
                     webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
-                    Toast.makeText(this, "Popup unblocked", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Podpup unblocked", Toast.LENGTH_SHORT).show();
 
                 }else{
                     navPopupEnabled=true;
