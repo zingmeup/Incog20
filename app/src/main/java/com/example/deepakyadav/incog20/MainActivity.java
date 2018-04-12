@@ -1,6 +1,7 @@
 package com.example.deepakyadav.incog20;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -21,8 +22,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Window;
 import android.view.inputmethod.EditorInfo;
 import android.webkit.URLUtil;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -57,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
     Dialog urldialog;
     Dialog optionsDialog;
     Dialog themechooserDialog;
+    Dialog quickSearchDialog;
+    WebView quickWeb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +95,25 @@ public class MainActivity extends AppCompatActivity {
         optionsDialog.setCanceledOnTouchOutside(true);
         Window window2=optionsDialog.getWindow();
         window2.setGravity(Gravity.BOTTOM);
+        quickSearchDialog=new Dialog(this, R.style.urldialogTheme);
+        Window windowqs=quickSearchDialog.getWindow();
+        windowqs.setGravity(Gravity.CENTER);
+        quickSearchDialog.setContentView(R.layout.dialog_quicksearch);
+        quickWeb=quickSearchDialog.findViewById(R.id.quicksearchwebView);
+        quickWeb.setWebViewClient(new WebViewClient());
+        quickWeb.setWebChromeClient(new WebChromeClient());
+        quickWeb.getSettings().setJavaScriptEnabled(true);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            quickWeb.getSettings().setSafeBrowsingEnabled(true);
+        }
+
+        quickWeb.loadUrl("https://www.google.com");
+        quickSearchDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                quickWeb.loadUrl("https://www.google.com");
+            }
+        });
 
         setSupportActionBar(toolbar);
 
@@ -148,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.home:
-                Toast.makeText(MainActivity.this,"Launch Home Screen",Toast.LENGTH_SHORT).show();
+                WebViewTabs.createNewTab();
                 break;
             case R.id.open_options:
                 optionsDialog.show();
@@ -226,6 +250,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.options_findin:
                 break;
             case R.id.options_downloads:
+
+                quickSearchDialog.show();
                 break;
             case R.id.options_login:
                 break;
@@ -326,10 +352,12 @@ public class MainActivity extends AppCompatActivity {
                 if(navProxyEnabled){
                     navProxyEnabled=false;
                     viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape));
+                    Toast.makeText(this, "Proxy Disabled", Toast.LENGTH_SHORT).show();
 
                 }else{
                     navProxyEnabled=true;
                     viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape_toggled));
+                    Toast.makeText(this, "Proxy Enabled", Toast.LENGTH_SHORT).show();
 
                 }
                 break;
@@ -337,10 +365,12 @@ public class MainActivity extends AppCompatActivity {
                 if(navAdblockEnabled){
                     navAdblockEnabled=false;
                     viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape));
+                    Toast.makeText(this, "Ads Unblocked", Toast.LENGTH_SHORT).show();
 
                 }else{
                     navAdblockEnabled=true;
                     viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape_toggled));
+                    Toast.makeText(this, "Ads Blocked", Toast.LENGTH_SHORT).show();
                 }
                 break;
 
@@ -349,11 +379,13 @@ public class MainActivity extends AppCompatActivity {
                     navPopupEnabled=false;
                     viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape));
                     webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
+                    Toast.makeText(this, "Popup unblocked", Toast.LENGTH_SHORT).show();
 
                 }else{
                     navPopupEnabled=true;
                     viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape_toggled));
                     webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+                    Toast.makeText(this, "Popup Blocked", Toast.LENGTH_SHORT).show();
 
                 }
                 break;
@@ -361,10 +393,13 @@ public class MainActivity extends AppCompatActivity {
                 if(navTrackerEnabled){
                     navTrackerEnabled=false;
                     viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape));
+                    Toast.makeText(this, "GeoLocation On", Toast.LENGTH_SHORT).show();
 
                 }else{
                     navTrackerEnabled=true;
                     viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape_toggled));
+                    webView.getSettings().setGeolocationEnabled(false);
+                    Toast.makeText(this, "GeoLocation Off", Toast.LENGTH_SHORT).show();
 
                 }
                 break;
@@ -375,6 +410,17 @@ public class MainActivity extends AppCompatActivity {
     public void setTheme(View view){
         ThemeChooser.getThemeChooser(MainActivity.this, toolbar, mBottomNav, urldialog, optionsDialog)
                 .setTheme(view.getId());
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(navIncognitoEnabled){
+            webView.clearHistory();
+            webView.clearFocus();
+            webView.destroy();
+            super.onDestroy();
+        }
     }
 }
 

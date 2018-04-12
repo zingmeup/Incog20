@@ -175,7 +175,7 @@
                             android:textColor="#000"
                             android:background="@drawable/nav_icon_background_shape_text"
                             android:padding="2dp"
-                            android:text="Downloads" />
+                            android:text="Quick Search" />
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/options_login"

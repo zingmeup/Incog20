@@ -188,7 +188,7 @@ public class WebViewTabs {
 
         if(url.equals("about:blank")){
             String html;
-            webView.loadUrl("about:blank");
+            webView.loadData("<!DOCTYPE html><html><head><title>Incog 2.0</title><style type=\"text/css\"> center {margin: auto;width: 100%; padding: 10px;margin-top: 80%;\n}</style></head><body><div class=\"center\" style=\"text-align: center; height:600px; margin-top:400px\"><h1 style=\"font-size: 50px;\">IᑎᑕOG 2.0</h1></div></body></html>", "text/html",null);
         }else {
             String currentURL=url.replace("http://", "")
                     .replace("https://", "")
