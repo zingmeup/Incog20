@@ -1,8 +1,12 @@
 package com.example.deepakyadav.incog20;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -25,6 +29,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -36,6 +41,7 @@ import com.example.deepakyadav.incog20.DataModel.WebViewTabs;
 import com.example.deepakyadav.incog20.QuickToolsHandler.ThemeChooser;
 
 public class MainActivity extends AppCompatActivity {
+    private Context context=MainActivity.this;
     public static ProgressBar progressBar;
     Dialog tabDialog;
     ListView tab_view, session_view;
@@ -258,7 +264,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_icognito_btn:
                 if(navIncognitoEnabled){
                     navIncognitoEnabled=false;
-                    viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape));
+                    //viewtemp.setBackground(getDrawable(R.drawable.nav_icon_background_shape));
+                    ImageView img=(ImageView)findViewById(R.id.image1test);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        img.setForeground(getDrawable(R.color.red));
+                    }
 
 
                 }else{
@@ -406,12 +416,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onPause() {
-        super.onPause();
+        View view1 = (View) findViewById(R.id.drawer_layout);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            view1.setForeground(new ColorDrawable(getResources().getColor(android.R.color.black)));
+        }
         if(navIncognitoEnabled){
+
             webView.clearHistory();
             webView.clearFocus();
             webView.destroy();
+            super.onPause();
             super.onDestroy();
+
+        }else{
+            super.onPause();
         }
     }
 }
