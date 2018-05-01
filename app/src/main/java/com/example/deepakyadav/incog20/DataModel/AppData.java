@@ -1,7 +1,6 @@
 package com.example.deepakyadav.incog20.DataModel;
 
 import android.graphics.Bitmap;
-import android.os.Bundle;
 
 public class AppData {
 

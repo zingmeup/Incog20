@@ -9,4 +9,9 @@
     <dimen name="nav_icon">45dp</dimen>
     <dimen name="nav_icon_radius">60dp</dimen>
     <dimen name="theme_chooser_icon">85dp</dimen>
+
+
+    <dimen name="nav_session_title">20sp</dimen>
+    <dimen name="nav_session_url">15sp</dimen>
+
 </resources>

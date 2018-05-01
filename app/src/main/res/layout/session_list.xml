@@ -7,14 +7,20 @@
     android:orientation="vertical">
 
     <TextView
+        android:text="Title"
         android:id="@+id/session_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"/>
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textSize="@dimen/nav_session_title"/>
     <TextView
+        android:text="www.google.com"
         android:id="@+id/session_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"/>
+        android:singleLine="true"
+        android:textColor="#c1c1c1"
+        android:textSize="@dimen/nav_session_url"/>
 
 </LinearLayout>

@@ -1,9 +1,5 @@
 package com.example.deepakyadav.incog20.DataModel;
 
-import android.util.Log;
-import android.webkit.WebView;
-
-import java.sql.DatabaseMetaData;
 import java.util.ArrayList;
 
 public class TabHandler {

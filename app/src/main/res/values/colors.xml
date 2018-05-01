@@ -13,9 +13,18 @@
 
 
 
+    <color name="theme_default_colorPrimaryDark">#000</color>
+    <color name="theme_default_colorPrimaryLight">#303030</color>
+    <color name="theme_default_colorPrimary">#212121</color>
+    <color name="theme_default_colortext">#ffffff</color>
+    <color name="theme_default_colorAccent">#3a3a3a</color>
+    <color name="theme_default_colorPrimaryText">#fff</color>
+    <color name="theme_default_colorSecondaryText">#757575</color>
+    <color name="theme_default_colorDivider">#bdbdbd</color>
+
     <color name="theme_blue_colorPrimaryDark">#0288d1</color>
-    <color name="theme_blue_colorPrimaryLight">#b3e5fc</color>
-    <color name="theme_blue_colorPrimary">#03a9f4</color>
+    <color name="theme_blue_colorPrimaryLight">#19a4f1</color>
+    <color name="theme_blue_colorPrimary">#0e96e1</color>
     <color name="theme_blue_colortext">#ffffff</color>
     <color name="theme_blue_colorAccent">#2ab3f1</color>
     <color name="theme_blue_colorPrimaryText">#212121</color>
@@ -49,9 +58,9 @@
     <color name="theme_teal_colorSecondaryText">#757575</color>
     <color name="theme_teal_colorDivider">#bdbdbd</color>
 
-    <color name="theme_yellow_colorPrimaryDark">#ff4000</color>
+    <color name="theme_yellow_colorPrimaryDark">#ffc107</color>
     <color name="theme_yellow_colorPrimaryLight">#ffecb3</color>
-    <color name="theme_yellow_colorPrimary">#ffc107</color>
+    <color name="theme_yellow_colorPrimary">#ffc518</color>
     <color name="theme_yellow_colortext">#212121</color>
     <color name="theme_yellow_colorAccent">#ffd24e</color>
     <color name="theme_yellow_colorPrimaryText">#212121</color>

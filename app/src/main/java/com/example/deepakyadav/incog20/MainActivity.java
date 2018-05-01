@@ -8,29 +8,23 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.TabLayout;
-import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Window;
 import android.view.inputmethod.EditorInfo;
-import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -40,11 +34,6 @@ import com.example.deepakyadav.incog20.DataModel.SessionHandler;
 import com.example.deepakyadav.incog20.DataModel.TabHandler;
 import com.example.deepakyadav.incog20.DataModel.WebViewTabs;
 import com.example.deepakyadav.incog20.QuickToolsHandler.ThemeChooser;
-
-import java.net.URI;
-import java.net.URL;
-import java.util.List;
-import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
     public static ProgressBar progressBar;
@@ -84,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         Window tab_window=tabDialog.getWindow();
         tab_window.setGravity(Gravity.CENTER);
 
-        urldialog=new Dialog(this,R.style.urldialogTheme);
+        urldialog=new Dialog(this, R.style.urldialogTheme);
         urldialog.setContentView(R.layout.urldialog);
         urldialog.setCanceledOnTouchOutside(true);
         Window window=urldialog.getWindow();
@@ -122,7 +111,10 @@ public class MainActivity extends AppCompatActivity {
 
         new WebViewTabs(webView,toolbar,MainActivity.this);
         WebViewTabs.createNewTab();
+        ThemeChooser.getThemeChooser(MainActivity.this, toolbar, mBottomNav, urldialog, optionsDialog).defaultTheme();
+
     }
+
 
     @Override
     public void onBackPressed() {
@@ -181,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openURLDialog(View view){
-        final Dialog urldialog=new Dialog(this,R.style.urldialogTheme);
+        final Dialog urldialog=new Dialog(this, R.style.urldialogTheme);
         urldialog.setContentView(R.layout.urldialog);
         urldialog.setCanceledOnTouchOutside(true);
         Window window=urldialog.getWindow();

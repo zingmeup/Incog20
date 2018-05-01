@@ -13,14 +13,15 @@
         android:gravity="center">
         <TextView
         android:id="@+id/nav_quickmodes_text"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top|center"
         android:layout_margin="6dp"
-        android:background="@drawable/nav_icon_background_shape_text"
         android:gravity="center"
         android:padding="2dp"
+            android:elevation="4dp"
         android:text="Quick Modes"
+        android:textColor="#fff"
         android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -69,17 +70,17 @@
                             <ImageView
                                 android:layout_width="@dimen/nav_icon"
                                 android:layout_height="@dimen/nav_icon"
-                                android:src="@drawable/ic_spy"
+                                android:src="@drawable/ic_hacker_new_black"
 
                                 />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:background="@drawable/nav_icon_background_shape_text2"
                                 android:padding="2dp"
                                 android:text="Incognito"
-                                android:textColor="#000" />
+                                android:textColor="#fff" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -101,10 +102,10 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:background="@drawable/nav_icon_background_shape_text2"
                                 android:padding="2dp"
                                 android:text="Reading"
-                                android:textColor="#000" />
+                                android:textColor="#fff" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -121,15 +122,15 @@
                             <ImageView
                                 android:layout_width="@dimen/nav_icon"
                                 android:layout_height="@dimen/nav_icon"
-                                android:src="@drawable/ic_image" />
+                                android:src="@drawable/ic_noimage_new_black" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:background="@drawable/nav_icon_background_shape_text2"
                                 android:padding="2dp"
                                 android:text="No Image"
-                                android:textColor="#000" />
+                                android:textColor="#fff" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -157,15 +158,15 @@
                             <ImageView
                                 android:layout_width="@dimen/nav_icon"
                                 android:layout_height="@dimen/nav_icon"
-                                android:src="@drawable/ic_flash" />
+                                android:src="@drawable/ic_flash_new_black" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:background="@drawable/nav_icon_background_shape_text2"
                                 android:padding="2dp"
                                 android:text="Flash/Script"
-                                android:textColor="#000" />
+                                android:textColor="#fff" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -182,15 +183,15 @@
                             <ImageView
                                 android:layout_width="@dimen/nav_icon"
                                 android:layout_height="@dimen/nav_icon"
-                                android:src="@drawable/ic_stars_1" />
+                                android:src="@drawable/ic_tent_night_new" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:background="@drawable/nav_icon_background_shape_text2"
                                 android:padding="2dp"
                                 android:text="NightMode"
-                                android:textColor="#000" />
+                                android:textColor="#fff" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -207,15 +208,15 @@
                             <ImageView
                                 android:layout_width="@dimen/nav_icon"
                                 android:layout_height="@dimen/nav_icon"
-                                android:src="@drawable/ic_hacker_2" />
+                                android:src="@drawable/ic_airplane_around_earth" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:background="@drawable/nav_icon_background_shape_text2"
                                 android:padding="2dp"
                                 android:text="Proxy"
-                                android:textColor="#000" />
+                                android:textColor="#fff" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -243,15 +244,15 @@
                             <ImageView
                                 android:layout_width="@dimen/nav_icon"
                                 android:layout_height="@dimen/nav_icon"
-                                android:src="@drawable/ic_advertising" />
+                                android:src="@drawable/ic_ads" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:background="@drawable/nav_icon_background_shape_text2"
                                 android:padding="2dp"
                                 android:text="Adblock"
-                                android:textColor="#000" />
+                                android:textColor="#fff" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -268,15 +269,15 @@
                             <ImageView
                                 android:layout_width="@dimen/nav_icon"
                                 android:layout_height="@dimen/nav_icon"
-                                android:src="@drawable/ic_pop_up" />
+                                android:src="@drawable/ic_windows" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:background="@drawable/nav_icon_background_shape_text2"
                                 android:padding="2dp"
                                 android:text="Pop up"
-                                android:textColor="#000" />
+                                android:textColor="#fff" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -293,15 +294,15 @@
                             <ImageView
                                 android:layout_width="@dimen/nav_icon"
                                 android:layout_height="@dimen/nav_icon"
-                                android:src="@drawable/ic_map" />
+                                android:src="@drawable/ic_placeholder" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/nav_icon_background_shape_text"
+                                android:background="@drawable/nav_icon_background_shape_text2"
                                 android:padding="2dp"
                                 android:text="Off Tracker"
-                                android:textColor="#000" />
+                                android:textColor="#fff" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -317,23 +318,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="@color/theme_default_colorPrimaryDark">
         <TextView
+            android:elevation="4dp"
             android:gravity="center"
             android:textSize="30sp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Session History"
             android:layout_margin="6dp"
-            android:padding="2dp"
-            android:background="@drawable/nav_icon_background_shape_text"/>
+            android:textColor="#fff"
+            android:padding="2dp"/>
 <!--        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">-->
         <ListView
+            android:background="@color/theme_default_colorPrimary"
             android:id="@+id/session_history"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
+            android:layout_height="match_parent">
+
+        </ListView>
 <!--        </ScrollView>-->
 
     </LinearLayout>

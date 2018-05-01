@@ -1,16 +1,13 @@
 package com.example.deepakyadav.incog20;
 
 import android.content.Context;
-import android.service.textservice.SpellCheckerService;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.deepakyadav.incog20.DataModel.AppData;
 import com.example.deepakyadav.incog20.DataModel.SessionHandler;
 import com.example.deepakyadav.incog20.DataModel.WebViewTabs;
 
