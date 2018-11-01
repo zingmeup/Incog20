@@ -1,0 +1,49 @@
+*news feed*
+
+
+-share feedbacks
+-upcomming events
+-gossips groups hot topics
+-private groups
+-status update frend/my
+-osho thinks that you are amazing
+-suvankar wishes to have a candle light dinner with you - affiliate marketing
+-shared from profile
+-photos
+-you've got a few flowers
+FRIENDSHIP AWARDS
+confessions
+
+
+
+*myprofile*
+tags, close friends aquanties etc..
+cover page- collage of friends photos
+      shuffle
+photo self upload
+recent status,name,age,sex,lives at,member since,no of friends,actvity log,update info,short desc,profile view,
+( *radio buttons for choosing
+semi circular options view)
+----
+FRIENDSHIP AWARDS self/others
+restrictions on coments.
+status update
+random questions to answer..
+
+*status*
+custom trendy status questions?
+
+*events*
+games..
+Chinar feature!
+-meta friend, intermediate between friend and not a friend!
+
+*search*
+
+#share feedback
+new public posts
+whose, by whom, 
+question
+answer
+like(s), comment(s) share(able)
+date time
