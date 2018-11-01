@@ -7,3 +7,5 @@ We have disabled screenshots and recorders from malware jacking.
 And many more features.
 
 We are currently working on more features on the Browser.
+
+Please read the documentations and see the screenshots in the folder
